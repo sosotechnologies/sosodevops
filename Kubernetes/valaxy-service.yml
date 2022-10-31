@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sosotech-service
+  labels:
+    app: sosotech-devops-project
+spec:
+  selector:
+    app: sosotech-devops-project
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 31200
